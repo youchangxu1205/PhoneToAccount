@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "cn.xuchangyou.phonetoaccount"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        // ... and any other excludes go here
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':mvp')
+    annotationProcessor rootProject.ext.dependencies["butterknife-apt"]
+    implementation rootProject.ext.dependencies["cardview-v7"]
+    implementation rootProject.ext.dependencies["RxFingerPrinter"]
+    implementation rootProject.ext.dependencies["easydao"]
+}
