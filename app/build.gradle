@@ -29,5 +29,6 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies["butterknife-apt"]
     implementation rootProject.ext.dependencies["cardview-v7"]
     implementation rootProject.ext.dependencies["RxFingerPrinter"]
-    implementation rootProject.ext.dependencies["easydao"]
+    implementation rootProject.ext.dependencies["snappydb"]
+    implementation rootProject.ext.dependencies["kryo"]
 }

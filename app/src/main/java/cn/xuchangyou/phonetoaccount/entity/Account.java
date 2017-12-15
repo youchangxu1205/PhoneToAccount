@@ -1,20 +1,24 @@
 package cn.xuchangyou.phonetoaccount.entity;
 
-import com.yuyh.easydao.annotation.Column;
-import com.yuyh.easydao.base.BaseEntity;
+import java.io.Serializable;
 
 /**
  * Created by Administrator on 2017/12/14.
  */
 
-public class Account extends BaseEntity{
-    @Column
+public class Account implements Serializable {
     private String accountName;
-    @Column
     private String phone;
-    @Column
     private String accountType;
+    private String id;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getAccountName() {
         return accountName;
