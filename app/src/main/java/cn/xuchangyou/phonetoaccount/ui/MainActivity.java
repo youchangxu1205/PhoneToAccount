@@ -50,9 +50,11 @@ public class MainActivity extends XActivity<PMain> {
     }
 
     public void initRec(List<Account> accountList){
-        MainAdapter mainAdapter = new MainAdapter(this,accountList);
+        MainAdapter mainAdapter = new MainAdapter(this);
+        mainAdapter.setData(accountList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(mainAdapter);
+        
     }
 
 

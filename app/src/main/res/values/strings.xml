@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PhoneToAccount</string>
     <string name="about">about</string>
+    <string name="init_data">Initialization data</string>
 </resources>

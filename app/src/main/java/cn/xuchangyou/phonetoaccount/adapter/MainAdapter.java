@@ -19,23 +19,9 @@ import cn.xuchangyou.phonetoaccount.entity.Account;
  */
 
 public class MainAdapter extends SimpleRecAdapter<Account, MainAdapter.ViewHolder> {
-    private List<Account> accountList;
 
     public MainAdapter(Context context) {
         super(context);
-    }
-
-    public MainAdapter(Context context, List<Account> accountList) {
-        super(context);
-        this.accountList = accountList;
-        if (accountList == null) {
-            this.accountList = new ArrayList<>();
-        }
-    }
-
-    @Override
-    public int getItemCount() {
-        return accountList.size();
     }
 
     @Override
@@ -49,7 +35,7 @@ public class MainAdapter extends SimpleRecAdapter<Account, MainAdapter.ViewHolde
     }
 
     public Account getItem(int position){
-        return accountList.get(position);
+        return data.get(position);
     }
 
     @Override
@@ -57,6 +43,7 @@ public class MainAdapter extends SimpleRecAdapter<Account, MainAdapter.ViewHolde
         Account account = getItem(position);
         holder.accountNameTv.setText(account.getAccountName());
         holder.accountTypeTv.setText(account.getAccountType());
+
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

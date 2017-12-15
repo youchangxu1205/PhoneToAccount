@@ -11,4 +11,7 @@
     <style name="ToolBarTheme" parent="Base.ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">@android:color/white</item>
     </style>
+    <style name="SplashProgressBarTheme" parent="Base.Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/custom_progress_horizontal</item>
+    </style>
 </resources>
