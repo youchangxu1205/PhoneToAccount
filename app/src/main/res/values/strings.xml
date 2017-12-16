@@ -2,4 +2,14 @@
     <string name="app_name">PhoneToAccount</string>
     <string name="about">about</string>
     <string name="init_data">Initialization data</string>
+    <string name="add_account">Add Account</string>
+    <string name="account_name">Account Name</string>
+    <string name="account_type">Account Type</string>
+    <string name="phone">Phone</string>
+    <string name="account_pwd">Account Password</string>
+    <string name="please_input_account_name">Please input your AccountName</string>
+    <string name="please_input_account_type">Please input AccountType</string>
+    <string name="please_input_account_phone">Please input your AccountPhone</string>
+    <string name="please_input_account_pwd">Please input Your AccountPassword</string>
+    <string name="save">save</string>
 </resources>

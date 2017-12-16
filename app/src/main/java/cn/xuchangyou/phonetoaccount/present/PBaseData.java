@@ -15,6 +15,8 @@ import cn.xuchangyou.phonetoaccount.ui.SplashActivity;
  */
 
 public class PBaseData extends XPresent<SplashActivity> {
+    private DB db;
+
     /**
      * 初始化账号类型
      * QQ
@@ -22,26 +24,42 @@ public class PBaseData extends XPresent<SplashActivity> {
      */
     public void initAccountTypeData() {
         try {
-            DB db = DBFactory.open(getV(), Constants.ACCOUNT_DB_NAME);
-//            if (db.exists(Constants.IS_INITED)) {
-//                boolean is_init = db.getBoolean(Constants.IS_INITED);
-//                if (is_init) {
-//                    new Handler().postDelayed(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            getV().toMainActivity();
-//                        }
-//                    },2000);
-//                    return;
-//                }
-//            }
+            db = DBFactory.open(getV(), Constants.ACCOUNT_DB_NAME);
+            if (db.exists(Constants.IS_INITED)) {
+                boolean is_init = db.getBoolean(Constants.IS_INITED);
+                if (is_init) {
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            getV().toMainActivity();
+                        }
+                    },2000);
+                    return;
+                }
+            }
             getV().progressBarChange();
             String[] acountType = {"QQ"};
             db.put(Constants.ACCOUNT_TYPE, acountType);
             db.putBoolean(Constants.IS_INITED, true);
+
+            db.close();
+
         } catch (SnappydbException e) {
             e.printStackTrace();
 
         }
+    }
+
+
+    public void onDestroy() {
+
+        if(db!=null){
+            try {
+                db.destroy();
+            } catch (SnappydbException e) {
+                e.printStackTrace();
+            }
+        }
+        db = null;
     }
 }

@@ -23,6 +23,8 @@
             android:label="@string/about"/>
         <activity android:name=".ui.MainActivity"
             android:label="@string/app_name"/>
+        <activity android:name=".ui.AddAccountActivity"
+            android:label="@string/add_account"/>
     </application>
 
 </manifest>

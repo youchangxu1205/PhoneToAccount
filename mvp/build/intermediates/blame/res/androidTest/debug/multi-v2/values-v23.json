@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\ideaproject\\PhoneToAccount\\mvp\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "/Users/xuchangyou/project/android/PhoneToAccount/mvp/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.0.aar\\340136b474e9f18cc114e6c5ec1a9ee6\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/xuchangyou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/9be7bd6fd3c36d1ba55461b7a21a5c35/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

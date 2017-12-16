@@ -76,11 +76,16 @@ public class SplashActivity extends XActivity<PBaseData> {
 
     public void toMainActivity() {
 
-
         Router.newIntent(this)
                 .to(MainActivity.class)
                 .launch();
         finish();
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        getP().onDestroy();
     }
 }

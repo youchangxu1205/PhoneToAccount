@@ -1,16 +1,16 @@
 ext {
 
     android = [
-            compileSdkVersion: 23,
-            buildToolsVersion: "23.0.2",
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.0.2",
 
             minSdkVersion    : 15,
-            targetSdkVersion : 23,
+            targetSdkVersion : 26,
 
             versionCode      : 1,
             versionName      : '1.0.0',
 
-            VSupportSdk      : '23.3.0',
+            VSupportSdk      : '26.0.2',
             VRetrofitSdk     : "2.2.0",
             VOkhttp          : "3.4.2",
             VRxlifecycle     : "2.0.1"
@@ -53,6 +53,8 @@ ext {
 
             "snappydb"                   : "com.snappydb:snappydb-lib:0.5.2",
             "kryo"                       : "com.esotericsoftware.kryo:kryo:2.24.0",
+
+            "aescrypt"                   : "com.scottyab:aescrypt:0.0.1"
     ]
 
 }

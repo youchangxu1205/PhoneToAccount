@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -20,7 +21,7 @@ android {
         exclude 'META-INF/rxjava.properties'
         // ... and any other excludes go here
     }
-
+    buildToolsVersion '26.0.2'
 }
 
 dependencies {
@@ -31,4 +32,5 @@ dependencies {
     implementation rootProject.ext.dependencies["RxFingerPrinter"]
     implementation rootProject.ext.dependencies["snappydb"]
     implementation rootProject.ext.dependencies["kryo"]
+    implementation rootProject.ext.dependencies["aescrypt"]
 }

@@ -25,6 +25,18 @@
             android:layout_height="match_parent">
 
         </android.support.v7.widget.RecyclerView>
+
+        <android.support.design.widget.FloatingActionButton
+            app:rippleColor="#56abe4"
+            app:backgroundTint="#56abe4"
+            android:id="@+id/fab_add_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/add"
+            android:layout_alignParentRight="true" />
     </RelativeLayout>
 
 
