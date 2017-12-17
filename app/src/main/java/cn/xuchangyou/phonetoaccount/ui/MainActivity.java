@@ -1,6 +1,7 @@
 package cn.xuchangyou.phonetoaccount.ui;
 
 import android.content.Intent;
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -22,6 +23,7 @@ import cn.xuchangyou.phonetoaccount.R;
 import cn.xuchangyou.phonetoaccount.adapter.MainAdapter;
 import cn.xuchangyou.phonetoaccount.entity.Account;
 import cn.xuchangyou.phonetoaccount.present.PMain;
+import cn.xuchangyou.phonetoaccount.view.SimplePaddingItemDecoration;
 
 public class MainActivity extends XActivity<PMain> {
     @BindView(R.id.navigation)
@@ -72,6 +74,7 @@ public class MainActivity extends XActivity<PMain> {
         mainAdapter = new MainAdapter(this);
         mainAdapter.setData(accountList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+//        recyclerView.addItemDecoration(new SimplePaddingItemDecoration(this));
         recyclerView.setAdapter(mainAdapter);
         
     }

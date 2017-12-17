@@ -28,8 +28,8 @@ public class PMain extends XPresent<MainActivity> {
             List<Account> accounts = new ArrayList<>();
             DB db = DBFactory.open(getV(), Constants.ACCOUNT_DB_NAME);
             String[] keys = db.findKeys(Constants.ACCOUNT_PREFIX);
-                for (String key : keys) {
-                    accounts.add(db.get(key, Account.class));
+            for (String key : keys) {
+                accounts.add(db.get(key, Account.class));
             }
             Collections.sort(accounts);
             getV().initRec(accounts);
